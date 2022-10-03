@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-nest
+  name: rmq-test-nest
 spec:
   selector:
     matchLabels:
-      app: test-nest
+      app: rmq-test-nest
   template:
     metadata:
       labels:
-        app: test-nest
+        app: rmq-test-nest
     spec:
       containers:
-        - name: test-nest
+        - name: rmq-test-nest
           imagePullPolicy: Always
-          image: 5h4k4r/test-nest-k8s:latest
+          image: 5h4k4r/rmq-test-nest-k8s:latest
           resources:
             limits:
               memory: "128Mi"

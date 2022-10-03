@@ -3,4 +3,4 @@ data:
   PORT: "80"
 kind: ConfigMap
 metadata:
-  name: test-nest
+  name: rmq-test-nest

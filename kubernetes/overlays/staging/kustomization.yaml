@@ -4,19 +4,19 @@ patches:
   - path: ingress-patch.yaml
     target:
       kind: Ingress
-      name: test-nest
+      name: rmq-test-nest
 
 commonLabels:
-  app: staging-test-nest
+  app: staging-rmq-test-nest
 namespace: staging
 configMapGenerator:
   - behavior: merge
     literals:
       - ENV=staging
-    name: test-nest
+    name: rmq-test-nest
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-  - name: 5h4k4r/test-nest-k8s
-    newName: 5h4k4r/test-nest-k8s
+  - name: 5h4k4r/rmq-test-nest-k8s
+    newName: 5h4k4r/rmq-test-nest-k8s
     newTag: 6e1f2110fb5671c41a5ac067bb4ed03083c5e6d9
