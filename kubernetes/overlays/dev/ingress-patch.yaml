@@ -6,7 +6,7 @@
   value:
     - hosts:
         - dev.nest.shakar.tech
-      secretName: dev-tls
+      secretName: lets-encrypt-dev-nest.shakar.tech
 - op: add
   path: /metadata/annotations
   value:
