@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-nest
+spec:
+  selector:
+    matchLabels:
+      app: test-nest
+  template:
+    metadata:
+      labels:
+        app: test-nest
+    spec:
+      containers:
+        - name: test-nest
+          imagePullPolicy: Always
+          image: 5h4k4r/test-nest-k8s:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "250m"
+          ports:
+            - containerPort: 3000

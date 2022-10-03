@@ -1,0 +1,11 @@
+resources:
+  - configmap.yaml
+  - deployment.yaml
+  - ingress.yaml
+  - service.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+  - name: 5h4k4r/test-nest-k8s
+    newName: 5h4k4r/test-nest-k8s
+    newTag: dev

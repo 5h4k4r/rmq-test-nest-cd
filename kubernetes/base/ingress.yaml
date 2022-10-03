@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: test-nest
+  labels:
+    name: test-nest
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+spec:
+  tls:
+    - hosts:
+        - nest.shakar.tech
+      secretName: lets-encrypt-nest.shakar.tech
+  rules:
+    - host: nest.shakar.tech
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: test-nest
+                port:
+                  name: http-app
