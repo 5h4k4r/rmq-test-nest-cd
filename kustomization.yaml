@@ -1,4 +1,2 @@
 bases:
   - kubernetes/overlays/dev
-  - kubernetes/overlays/staging
-  - kubernetes/overlays/prod
