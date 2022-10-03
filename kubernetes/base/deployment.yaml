@@ -14,7 +14,7 @@ spec:
       containers:
         - name: rmq-test-nest
           imagePullPolicy: Always
-          image: 5h4k4r/rmq-test-nest-k8s:latest
+          image: 5h4k4r/rmq-test-nest:latest
           resources:
             limits:
               memory: "128Mi"
