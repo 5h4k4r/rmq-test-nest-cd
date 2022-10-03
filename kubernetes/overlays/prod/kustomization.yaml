@@ -1,22 +1,25 @@
 resources:
-  - ../../base
+- ../../base
 patches:
-  - path: ingress-patch.yaml
-    target:
-      kind: Ingress
-      name: test-nest
+- path: ingress-patch.yaml
+  target:
+    kind: Ingress
+    name: test-nest
 
 commonLabels:
   app: prod-test-nest
 namespace: prod
 configMapGenerator:
-  - behavior: merge
-    literals:
-      - ENV=prod
-    name: test-nest
+- behavior: merge
+  literals:
+  - ENV=prod
+  name: test-nest
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-  - name: 5h4k4r/test-nest-k8s
-    newName: 5h4k4r/test-nest-k8s
-    newTag: 6e1f2110fb5671c41a5ac067bb4ed03083c5e6d9
+- name: 5h4k4r/rmq-test-nest
+  newName: 5h4k4r/rmq-test-nest
+  newTag: 9517d34ce7191d14c9cb85813970459cbd4dc612
+- name: 5h4k4r/test-nest-k8s
+  newName: 5h4k4r/test-nest-k8s
+  newTag: 6e1f2110fb5671c41a5ac067bb4ed03083c5e6d9
