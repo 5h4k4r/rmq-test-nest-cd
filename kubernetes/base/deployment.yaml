@@ -17,7 +17,7 @@ spec:
           image: 5h4k4r/rmq-test-nest:latest
           resources:
             limits:
-              memory: "128Mi"
-              cpu: "250m"
+              memory: "50Mi"
+              cpu: "100m"
           ports:
             - containerPort: 3000
