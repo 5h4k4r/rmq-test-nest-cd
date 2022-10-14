@@ -1,12 +1,12 @@
 - op: replace
   path: /spec/rules/0/host
-  value: dev.nest.shakar.tech
+  value: dev.consumer.shakar.tech
 - op: add
   path: /spec/tls
   value:
     - hosts:
-        - dev.nest.shakar.tech
-      secretName: lets-encrypt-dev-nest.shakar.tech
+        - dev.consumer.shakar.tech
+      secretName: lets-encrypt-dev.consumer.shakar.tech
 - op: add
   path: /metadata/annotations
   value:
