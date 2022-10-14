@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rmq-test-nest
+  name: rmq-test-consumer
 spec:
   selector:
     matchLabels:
-      app: rmq-test-nest
+      app: rmq-test-consumer
   template:
     metadata:
       labels:
-        app: rmq-test-nest
+        app: rmq-test-consumer
     spec:
       affinity:
         nodeAffinity:
@@ -21,7 +21,7 @@ spec:
                     values:
                       - worker
       containers:
-        - name: rmq-test-nest
+        - name: rmq-test-consumer
           imagePullPolicy: Always
           image: 5h4k4r/rmq-test-nest:latest
           resources:
