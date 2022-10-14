@@ -4,7 +4,7 @@ patches:
   - path: ingress-patch.yaml
     target:
       kind: Ingress
-      name: rmq-test-nest
+      name: rmq-test-consumer
 
 commonLabels:
   app: staging-rmq-test-nest
