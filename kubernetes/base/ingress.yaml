@@ -19,6 +19,6 @@ spec:
             path: /
             backend:
               service:
-                name: rmq-test-nest
+                name: rmq-test-consumer
                 port:
                   name: http-app

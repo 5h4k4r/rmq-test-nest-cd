@@ -7,13 +7,13 @@ patches:
       name: rmq-test-consumer
 
 commonLabels:
-  app: staging-rmq-test-nest
+  app: staging-rmq-test-consumer
 namespace: staging
 configMapGenerator:
   - behavior: merge
     literals:
       - ENV=staging
-    name: rmq-test-nest
+    name: rmq-test-consumer
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
