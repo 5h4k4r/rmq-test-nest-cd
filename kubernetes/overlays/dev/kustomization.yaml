@@ -1,11 +1,5 @@
 resources:
   - ../../base
-patches:
-  - path: ingress-patch.yaml
-    target:
-      kind: Ingress
-      name: rmq-test-consumer
-
 commonLabels:
   app: dev-rmq-test-consumer
 namespace: dev
