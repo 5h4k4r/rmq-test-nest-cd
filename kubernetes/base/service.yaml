@@ -6,3 +6,4 @@ spec:
   ports:
     - name: http-app
       port: 80
+      targetPort: 3000
