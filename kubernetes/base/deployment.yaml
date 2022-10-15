@@ -29,4 +29,10 @@ spec:
               memory: "50Mi"
               cpu: "100m"
           ports:
-            - containerPort: 3000
+            - containerPort: 80
+          env:
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: rmq-test-consumer
+                  key: PORT
