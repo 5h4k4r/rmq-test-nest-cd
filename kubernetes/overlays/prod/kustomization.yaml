@@ -1,22 +1,22 @@
 resources:
-  - ../../base
+- ../../base
 patches:
-  - path: ingress-patch.yaml
-    target:
-      kind: Ingress
-      name: rmq-test-consumer
+- path: ingress-patch.yaml
+  target:
+    kind: Ingress
+    name: rmq-test-consumer
 
 commonLabels:
   app: prod-rmq-test-consumer
 namespace: prod
 configMapGenerator:
-  - behavior: merge
-    literals:
-      - ENV=prod
-    name: rmq-test-consumer
+- behavior: merge
+  literals:
+  - ENV=prod
+  name: rmq-test-consumer
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-  - name: 5h4k4r/rmq-test-nest
-    newName: 5h4k4r/rmq-test-nest
-    newTag: 4b9a7c4c69e18416d5dc10b841e75e537fdb605b
+- name: 5h4k4r/rmq-test-nest
+  newName: 5h4k4r/rmq-test-nest
+  newTag: c537787bb927bce57ebf69b173125e081f941f1a
